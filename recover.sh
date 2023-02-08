@@ -1,7 +1,7 @@
 mkdir encrypted_files
 
 echo -e "Moving encrypted $1.vmdk to encrypted_files"
-mv "$1.vmdk" "encrypted_files/$1.vmdk"
+mv "$1.vmdk" "encrypted_files/$1.vmdk.encrypted"
 file_size=$(ls -la "$1-flat.vmdk" | awk '{print $5}')
 
 echo -e "\nCreating copy of $1-flat.vmdk"
@@ -16,7 +16,7 @@ fi
 mv temp.vmdk "$1.vmdk"
 
 echo -e "\nCopying $1.vmx"
-mv "$1.vmx" "encrypted_files/$1.vmx"
+mv "$1.vmx" "encrypted_files/$1.vmx.encrypted"
 cp "$1.vmx~" "$1.vmx"
 
 retVal=$?
@@ -25,10 +25,10 @@ if [ $retVal -ne 0 ]; then
 fi
 
 echo -e "\nMoving encrypted $1.vmsd to encrypted_files"
-mv "$1.vmsd" "encrypted_files/$1.vmsd"
+mv "$1.vmsd" "encrypted_files/$1.vmsd.encrypted"
 
 echo -e "\nMoving encrypted $1.nvram to encrypted_files"
-mv "$1.nvram" "encrypted_files/$1.nvram"
+mv "$1.nvram" "encrypted_files/$1.nvram.encrypted"
 
 echo -e ""
 
