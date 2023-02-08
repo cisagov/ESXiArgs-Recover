@@ -20,8 +20,8 @@ This script is being provided “as is” for informational purposes only. CISA 
 6.	If successful, the decryptor script will output that it has successfully run. If unsuccessful, this may mean that your virtual machines cannot be recovered.
 7.	If the script succeeded, the last step is to re-register the virtual machine.
 8.	If the ESXi web interface is inaccessible, take the following steps to remove the ransom note and restore access (note that taking the steps below moves the ransom note to the file `ransom.html`. Cconsider archiving this file for future incident review).
-    - Run `cd /usr/lib/vmware/hostd/docroot/ui/ & mv index.html ransom.html & mv index1.html index.html`
-    - Run `cd /usr/lib/vmware/hostd/docroot & mv index.html ransom.html & rm index.html & mv index1.html index.html`
+    - Run `cd /usr/lib/vmware/hostd/docroot/ui/ && mv index.html ransom.html && mv index1.html index.html`
+    - Run `cd /usr/lib/vmware/hostd/docroot && mv index.html ransom.html && rm index.html & mv index1.html index.html`
     - Reboot the ESXi server (e.g., with the `reboot` command). After a few minutes, you should be able to navigate to the web interface.
 9.	In the ESXi web interface, navigate to the Virtual Machines page.
 10.	If the VM you restored already exists, right click on the VM and select “Unregister”.
