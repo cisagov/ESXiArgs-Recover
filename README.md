@@ -2,7 +2,7 @@
 
 ESXiArgs-Recover is a tool to allow organizations to attempt recovery of virtual machines affected by the ESXiArgs ransomware attacks. 
 
-CISA is aware that some organizations have reported success in recovering files without paying ransoms. CISA compiled this tool based on publicly available resources, including [a tutorial](http://enes.dev/) by Enes Sonmez and Ahmet Aykac. This tool works by reconstructing virtual machine metadata from virtual disks that were not encrypted by the malware.
+CISA is aware that some organizations have reported success in recovering files without paying ransoms. CISA compiled this tool based on publicly available resources, including [a tutorial](http://enes.dev/) by Enes Sonmez and Ahmet Aykac. This tool works by reconstructing virtual machine metadata from virtual disks that were not encrypted by the malware. For more information, see CISA's [ESXiArgs Ransomware Virtual Machine Recovery Guidance](https://www.cisa.gov/uscert/ncas/alerts/aa23-039a).
 
 ## Disclaimer
 
