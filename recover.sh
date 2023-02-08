@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 mkdir encrypted_files
 
 echo -e "Moving encrypted $1.vmdk to encrypted_files"
