@@ -46,7 +46,7 @@ if [ $retVal -ne 0 ]; then
     vmkfstools -e $1.vmdk
     retVal=$?
     if [ $retVal -ne 0 ]; then
-        echo -e "\nError. Could not decrypt."
+        echo -e "\nError. Could not recover."
     else
         echo -e "\nSuccess! Unregister the virtual machine and re-register it and you should be good to go.\n"
     fi
