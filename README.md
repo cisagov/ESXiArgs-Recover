@@ -13,7 +13,8 @@ This script is being provided “as is” for informational purposes only. CISA 
 ## Usage
 
 1. Download this script and save it as `/tmp/recover.sh`. For example, with wget: `wget -O /tmp/recover.sh https://raw.githubusercontent.com/cisagov/ESXiArgs-Recover/main/recover.sh`
-2. Give the script execute permissions: `chmod +x /tmp/recover.sh`
+2. Give the script execute permissions: `chmod +x /tmp/recover.sh`  
+    Not required if `git clone`
 3. Navigate to the folder of a virtual machine you would like to decrypt (you may browse these folders by running `ls /vmfs/volumes/datastore1`). For instance, if the folder is called `example`, run `cd /vmfs/volumes/datastore1/example`
 4.	Run `ls` to view the files. Note the name of the VM (e.g. if there is a file `example.vmdk`, the name of the VM is `example`).
 5.	Run the recovery script with `/tmp/recover.sh [name]`, where `[name]` is the name of the virtual machine determined in step 4. If the virtual machine is a thin format, run `/tmp/recover.sh [name] thin`.
@@ -27,7 +28,7 @@ This script is being provided “as is” for informational purposes only. CISA 
 10.	If the VM you restored already exists, right click on the VM and select “Unregister”.
 11.	Select “Create / Register VM”. 
 12.	Select “Register an existing virtual machine”.
-13.	 Click “Select one or more virtual machines, a datastore or a directory” to navigate to the folder of the VM you restored. Select the vmx file in the folder.
+13.	Click “Select one or more virtual machines, a datastore or a directory” to navigate to the folder of the VM you restored. Select the vmx file in the folder.
 14.	Select “Next” and “Finish”. You should now be able to use the VM as normal.
 
 If needed, the script will save encrypted files in a new `encrypted_files` folder within each virtual machine’s directory.
